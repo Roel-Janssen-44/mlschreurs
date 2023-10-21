@@ -109,8 +109,8 @@ async function Footer() {
         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
           <PrismicRichText field={footer.data.title_column_1} />
           <ul className="">
-            {footer.data.column_1.map((item) => (
-              <li className="py-1" key={item.item}>
+            {footer.data.column_1.map((item, index) => (
+              <li className="py-1" key={`col_1_item_${index}`}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}
@@ -119,8 +119,8 @@ async function Footer() {
         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
           <PrismicRichText field={footer.data.title_column_2} />
           <ul className="">
-            {footer.data.column_2.map((item) => (
-              <li className="py-1" key={item.item}>
+            {footer.data.column_2.map((item, index) => (
+              <li className="py-1" key={`col_1_item_${index}`}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}
@@ -129,8 +129,8 @@ async function Footer() {
         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
           <PrismicRichText field={footer.data.title_column_3} />
           <ul className="">
-            {footer.data.column_3.map((item) => (
-              <li className="py-1" key={item.item}>
+            {footer.data.column_3.map((item, index) => (
+              <li className="py-1" key={`col_1_item_${index}`}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}
@@ -139,8 +139,8 @@ async function Footer() {
         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
           <PrismicRichText field={footer.data.title_column_4} />
           <ul className="">
-            {footer.data.column_4.map((item) => (
-              <li className="py-1" key={item.item}>
+            {footer.data.column_4.map((item, index) => (
+              <li className="py-1" key={`col_1_item_${index}`}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}

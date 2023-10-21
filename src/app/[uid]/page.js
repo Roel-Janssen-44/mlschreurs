@@ -15,9 +15,13 @@ import { components } from "@/slices";
  */
 export async function generateMetadata({ params }) {
   const client = createClient();
+  console.log("params");
+  console.log(params.uid);
   const page = await client
     .getByUID("page", params.uid)
     .catch(() => notFound());
+  console.log("page");
+  console.log(page);
   const settings = await client.getSingle("settings");
 
   return {
@@ -50,7 +54,8 @@ export async function generateStaticParams() {
   const client = createClient();
 
   const pages = await client.getAllByType("page");
-
+  // console.log("pages");
+  // console.log(pages);
   return pages.map((page) => {
     return { uid: page.uid };
   });
