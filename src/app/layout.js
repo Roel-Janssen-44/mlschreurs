@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
         <Header />
         {children}
         <PrismicPreview repositoryName={repositoryName} />
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
@@ -39,7 +39,7 @@ async function Header() {
 
   return (
     <header className="h-20 flex justify-center items-center fixed z-20 top-0 bg-white w-screen shadow-lg">
-      <div className="container flex flex-wrap items-baseline justify-between leading-none">
+      <div className="container flex flex-wrap items-center sm:items-baseline justify-between leading-none">
         <PrismicNextLink
           href="/"
           className="text-3xl p-4 pl-0 font-semibold tracking-tight"
@@ -99,54 +99,54 @@ async function Header() {
   );
 }
 
-// async function Footer() {
-//   const client = createClient();
-//   const footer = await client.getSingle("footer");
+async function Footer() {
+  const client = createClient();
+  const footer = await client.getSingle("footer");
 
-//   return (
-//     <footer className="py-20 bg-gray-200">
-//       <div className="container flex flex-row flex-wrap justify-between">
-//         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
-//           <PrismicRichText field={footer.data.title_column_1} />
-//           <ul className="">
-//             {footer.data.column_1.map((item) => (
-//               <li className="py-1" key={item.item}>
-//                 <PrismicRichText field={item.item} />
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
-//           <PrismicRichText field={footer.data.title_column_2} />
-//           <ul className="">
-//             {footer.data.column_2.map((item) => (
-//               <li className="py-1" key={item.item}>
-//                 <PrismicRichText field={item.item} />
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
-//           <PrismicRichText field={footer.data.title_column_3} />
-//           <ul className="">
-//             {footer.data.column_3.map((item) => (
-//               <li className="py-1" key={item.item}>
-//                 <PrismicRichText field={item.item} />
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
-//           <PrismicRichText field={footer.data.title_column_4} />
-//           <ul className="">
-//             {footer.data.column_4.map((item) => (
-//               <li className="py-1" key={item.item}>
-//                 <PrismicRichText field={item.item} />
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
+  return (
+    <footer className="py-20 bg-gray-200">
+      <div className="container flex flex-row flex-wrap justify-between">
+        <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
+          <PrismicRichText field={footer.data.title_column_1} />
+          <ul className="">
+            {footer.data.column_1.map((item) => (
+              <li className="py-1" key={item.item}>
+                <PrismicRichText field={item.item} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
+          <PrismicRichText field={footer.data.title_column_2} />
+          <ul className="">
+            {footer.data.column_2.map((item) => (
+              <li className="py-1" key={item.item}>
+                <PrismicRichText field={item.item} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
+          <PrismicRichText field={footer.data.title_column_3} />
+          <ul className="">
+            {footer.data.column_3.map((item) => (
+              <li className="py-1" key={item.item}>
+                <PrismicRichText field={item.item} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
+          <PrismicRichText field={footer.data.title_column_4} />
+          <ul className="">
+            {footer.data.column_4.map((item) => (
+              <li className="py-1" key={item.item}>
+                <PrismicRichText field={item.item} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
+}
