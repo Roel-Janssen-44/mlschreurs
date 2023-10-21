@@ -86,38 +86,6 @@
           }
         },
         {
-          "key": "quote$6e8fb18a-3fe5-4a3b-9925-6499eff63b8e",
-          "name": "quote",
-          "widget": {
-            "__TYPE__": "SharedSliceContent",
-            "variation": "default",
-            "primary": {
-              "quote": {
-                "__TYPE__": "StructuredTextContent",
-                "value": [
-                  {
-                    "type": "heading3",
-                    "content": {
-                      "text": "Dance"
-                    }
-                  }
-                ]
-              },
-              "source": {
-                "__TYPE__": "FieldContent",
-                "value": "lake",
-                "type": "Text"
-              }
-            },
-            "items": [
-              {
-                "__TYPE__": "GroupItemContent",
-                "value": []
-              }
-            ]
-          }
-        },
-        {
           "key": "text$ce838efe-f73d-48af-b316-ec5e1453a370",
           "name": "text",
           "widget": {

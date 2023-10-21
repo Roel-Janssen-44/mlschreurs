@@ -1,8 +1,8 @@
 {
-  "id": "hero",
+  "id": "collecties",
   "type": "SharedSlice",
-  "name": "Hero",
-  "description": "Hero",
+  "name": "Collecties",
+  "description": "Collecties",
   "variations": [
     {
       "id": "default",
@@ -18,7 +18,7 @@
             "label": "Titel",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "heading1"
+            "single": "heading2"
           }
         },
         "paragraph": {
@@ -27,35 +27,49 @@
             "label": "Paragraaf",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "multi": "paragraph"
           }
         },
-        "button_label": {
-          "type": "Text",
+        "text_alignment": {
+          "type": "Select",
           "config": {
-            "label": "Button label",
-            "placeholder": ""
+            "label": "Tekst uitlijning",
+            "placeholder": "",
+            "options": [
+              "Links",
+              "Midden"
+            ],
+            "default_value": "Links"
           }
-        },
-        "button_link": {
+        }
+      },
+      "items": {
+        "category_link": {
           "type": "Link",
           "config": {
-            "label": "Button Link",
+            "label": "Categorie Link",
             "placeholder": "",
-            "allowTargetBlank": false,
             "select": null
           }
         },
-        "image": {
+        "category_name": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Categorie Naam",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "category_image": {
           "type": "Image",
           "config": {
-            "label": "Afbeelding",
+            "label": "Categorie Afbeeldign",
             "constraint": {},
             "thumbnails": []
           }
         }
-      },
-      "items": {}
+      }
     }
   ]
 }

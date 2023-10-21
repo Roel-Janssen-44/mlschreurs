@@ -1,0 +1,96 @@
+{
+  "id": "afbeelding_met_tekst",
+  "type": "SharedSlice",
+  "name": "AfbeeldingMetTekst",
+  "description": "AfbeeldingMetTekst",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background": {
+          "type": "Select",
+          "config": {
+            "label": "Achtergrond kleur",
+            "placeholder": "",
+            "options": [
+              "Kleur 1",
+              "Kleur 2"
+            ],
+            "default_value": "Kleur 1"
+          }
+        },
+        "image_position": {
+          "type": "Select",
+          "config": {
+            "label": "Positie afbeelding",
+            "placeholder": "",
+            "options": [
+              "Links",
+              "Rechts"
+            ],
+            "default_value": "Links"
+          }
+        },
+        "text_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "Tekst uitlijning",
+            "placeholder": "",
+            "options": [
+              "Links",
+              "Midden"
+            ],
+            "default_value": "Links"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "paragraph": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraaf",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

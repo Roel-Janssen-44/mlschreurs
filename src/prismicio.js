@@ -28,7 +28,7 @@ const routes = [
     path: "/",
   },
   {
-    type: "navigation",
+    type: "navigatie",
     path: "/",
   },
 ];

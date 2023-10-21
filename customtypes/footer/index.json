@@ -1,0 +1,115 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title_column_1": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Titel kolom 1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        }
+      },
+      "column_1": {
+        "type": "Group",
+        "config": {
+          "label": "Kolom 1",
+          "fields": {
+            "item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Item",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading5,strong,em,hyperlink"
+              }
+            }
+          }
+        }
+      },
+      "title_column_2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Titel kolom 2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        }
+      },
+      "column_2": {
+        "type": "Group",
+        "config": {
+          "label": "Kolom 2",
+          "fields": {
+            "item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Item",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading5,strong,em,hyperlink"
+              }
+            }
+          }
+        }
+      },
+      "title_column_3": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Titel kolom 3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        }
+      },
+      "column_3": {
+        "type": "Group",
+        "config": {
+          "label": "Kolom 3",
+          "fields": {
+            "item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Item",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading5,strong,em,hyperlink"
+              }
+            }
+          }
+        }
+      },
+      "title_column_4": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Titel kolom 4",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        }
+      },
+      "column_4": {
+        "type": "Group",
+        "config": {
+          "label": "Kolom 4",
+          "fields": {
+            "item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Item",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading5,strong,em,hyperlink"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

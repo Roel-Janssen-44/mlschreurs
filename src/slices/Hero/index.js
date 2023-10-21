@@ -1,50 +1,45 @@
 import * as prismic from "@prismicio/client";
-import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
-
-import { Bounded } from "@/components/Bounded";
-import { Heading } from "@/components/Heading";
 import { PrismicRichText } from "@/components/PrismicRichText";
+import { PrismicNextImage } from "@prismicio/next";
 
-/** @type {import("@prismicio/react").PrismicRichTextProps['components']} */
-const components = {
-  heading1: ({ children }) => (
-    <Heading as="h2" size="xl" className="mb-4 mt-12 first:mt-0 last:mb-0">
-      {children}
-    </Heading>
-  ),
-};
+import { Button } from "@/components/Button";
+
+/**
+ * @typedef {import("@prismicio/client").Content.HeroSlice} HeroSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<HeroSlice>} HeroProps
+ * @param {HeroProps}
+ */
 
 const Hero = ({ slice }) => {
-  const backgroundImage = slice.primary.backgroundImage;
+  const backgroundImage = slice.primary.image;
 
   return (
-    <section className="relative bg-slate-900 text-white">
-      {prismic.isFilled.image(backgroundImage) && (
-        <PrismicNextImage
-          field={backgroundImage}
-          alt=""
-          fill={true}
-          className="pointer-events-none select-none object-cover opacity-40"
-        />
-      )}
-      <Bounded yPadding="lg" className="relative">
-        <div className="grid justify-items-center gap-8">
-          <div className="max-w-2xl text-center">
-            <PrismicRichText
-              field={slice.primary.text}
-              components={components}
+    <section
+      data-slice-type={slice.slice_type}
+      data-slice-variation={slice.variation}
+      className="min-h-screen"
+    >
+      <div className="relative h-screen">
+        {prismic.isFilled.image(backgroundImage) && (
+          <PrismicNextImage
+            field={backgroundImage}
+            alt=""
+            fill={true}
+            className="pointer-events-none select-none object-cover"
+          />
+        )}
+        <div className="absolute w-full left-0 top-1/2 -translate-y-1/2">
+          <div className="container">
+            <PrismicRichText field={slice.primary.title} />
+            <PrismicRichText field={slice.primary.paragraph} />
+            <Button
+              type="primary"
+              link={slice.primary.button_link}
+              label={slice.primary.button_label}
             />
           </div>
-          {prismic.isFilled.link(slice.primary.buttonLink) && (
-            <PrismicNextLink
-              field={slice.primary.buttonLink}
-              className="rounded bg-white px-5 py-3 font-medium text-slate-800"
-            >
-              {slice.primary.buttonText || "Learn More"}
-            </PrismicNextLink>
-          )}
         </div>
-      </Bounded>
+      </div>
     </section>
   );
 };

@@ -20,6 +20,16 @@ const defaultComponents = {
       {children}
     </Heading>
   ),
+  heading4: ({ children }) => (
+    <Heading as="h4" size="sm" className="mb-3 mt-12 first:mt-0 last:mb-0">
+      {children}
+    </Heading>
+  ),
+  heading5: ({ children }) => (
+    <Heading as="h5" size="xs" className="mb-3 mt-12 first:mt-0 last:mb-0">
+      {children}
+    </Heading>
+  ),
   paragraph: ({ children }) => <p className="mb-7 last:mb-0">{children}</p>,
   oList: ({ children }) => (
     <ol className="mb-7 pl-4 last:mb-0 md:pl-6">{children}</ol>

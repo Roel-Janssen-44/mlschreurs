@@ -1,0 +1,79 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"button_label": {
+				"__TYPE__": "FieldContent",
+				"value": "sometime",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"background": {
+				"__TYPE__": "FieldContent",
+				"value": "Kleur 1",
+				"type": "Select"
+			},
+			"image_position": {
+				"__TYPE__": "FieldContent",
+				"value": "Links",
+				"type": "Select"
+			},
+			"text_alignment": {
+				"__TYPE__": "FieldContent",
+				"value": "Midden",
+				"type": "Select"
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Sweet"
+						}
+					}
+				]
+			},
+			"paragraph": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Pariatur amet ullamco sit voluptate dolor elit ad reprehenderit exercitation in laboris exercitation enim nostrud. Sit ad id cillum occaecat fugiat Lorem ea. Mollit esse eu ipsum est ea ea consequat culpa dolore id fugiat amet do dolore sunt."
+						}
+					}
+				]
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+					"width": 5616,
+					"height": 3744
+				},
+				"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+				"width": 5616,
+				"height": 3744,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
