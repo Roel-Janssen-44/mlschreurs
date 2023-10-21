@@ -29,9 +29,9 @@ const Collecties = ({ slice }) => {
         </div>
         {slice.items.length > 0 && (
           <ul className="flex flex-row flex-wrap gap-8 justify-center sm:justify-between">
-            {slice.items.map((item) => (
+            {slice.items.map((item, index) => (
               <li
-                key={item.category_name}
+                key={item.category_name + index}
                 className="group w-96 sm:w-[272px] md:w-[335px] lg:w-[277px] bg-white rounded hover:shadow-lg duration-300"
               >
                 <PrismicNextLink field={item.category_link}>

@@ -34,6 +34,13 @@ export default async function RootLayout({ children }) {
 
 async function Header() {
   const client = createClient();
+  console.log("client");
+  console.log(client);
+  console.log("client.getMasterRef()");
+  const masterRef = await client.getMasterRef();
+  console.log("masterRef begin");
+  console.log(masterRef);
+  console.log("masterRef");
   const settings = await client.getSingle("settings");
   const navigation = await client.getSingle("navigatie");
 
