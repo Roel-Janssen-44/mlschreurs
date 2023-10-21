@@ -31,6 +31,10 @@ const routes = [
     type: "navigatie",
     path: "/",
   },
+  {
+    type: "footer",
+    path: "/",
+  },
 ];
 
 /**
