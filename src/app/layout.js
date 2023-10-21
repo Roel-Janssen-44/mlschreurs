@@ -14,7 +14,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-import { HiChevronDown } from "react-icons/hi";
+// import { HiChevronDown } from "react-icons/hi";
 
 /**
  * @param {{ children: React.ReactNode }}
@@ -71,7 +71,7 @@ async function Header() {
                   <>
                     {/* To do chevron icon */}
                     <div className="absolute right-0 top-1/2 -translate-y-1/2 duration-300 scale-y-100 group-hover:-scale-y-100">
-                      <HiChevronDown />
+                      {/* <HiChevronDown /> */}
                     </div>
                     <ul className="absolute min-w-[100%] top-10 left-0 pt-6 pb-2 bg-white rounded hidden group-hover:block">
                       {slice.items?.map((item) => (
