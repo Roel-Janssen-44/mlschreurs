@@ -31,10 +31,10 @@ const routes = [
     type: "navigatie",
     path: "/",
   },
-  // {
-  //   type: "footer",
-  //   path: "/",
-  // },
+  {
+    type: "footer",
+    path: "/",
+  },
 ];
 
 /**
