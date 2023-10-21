@@ -110,7 +110,7 @@ async function Footer() {
           <PrismicRichText field={footer.data.title_column_1} />
           <ul className="">
             {footer.data.column_1.map((item) => (
-              <li className="py-1">
+              <li className="py-1" key={item.item}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}
@@ -120,7 +120,7 @@ async function Footer() {
           <PrismicRichText field={footer.data.title_column_2} />
           <ul className="">
             {footer.data.column_2.map((item) => (
-              <li className="py-1">
+              <li className="py-1" key={item.item}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}
@@ -130,7 +130,7 @@ async function Footer() {
           <PrismicRichText field={footer.data.title_column_3} />
           <ul className="">
             {footer.data.column_3.map((item) => (
-              <li className="py-1">
+              <li className="py-1" key={item.item}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}
@@ -140,7 +140,7 @@ async function Footer() {
           <PrismicRichText field={footer.data.title_column_4} />
           <ul className="">
             {footer.data.column_4.map((item) => (
-              <li className="py-1">
+              <li className="py-1" key={item.item}>
                 <PrismicRichText field={item.item} />
               </li>
             ))}
