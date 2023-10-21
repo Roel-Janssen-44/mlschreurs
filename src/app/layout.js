@@ -105,7 +105,6 @@ async function Footer() {
 
   return (
     <footer className="py-20 bg-gray-200">
-      footer
       <div className="container flex flex-row flex-wrap justify-between">
         <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
           <PrismicRichText field={footer.data.title_column_1} />
