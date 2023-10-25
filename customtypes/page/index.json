@@ -25,9 +25,9 @@
       "parent": {
         "type": "Link",
         "config": {
-          "label": "Parent",
+          "label": "Parent page",
           "select": "document",
-          "customtypes": ["page"]
+          "customtypes": []
         }
       },
       "slices": {
@@ -35,6 +35,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "contact": {
+              "type": "SharedSlice"
+            },
+            "collage": {
+              "type": "SharedSlice"
+            },
+            "paragraaf": {
+              "type": "SharedSlice"
+            },
             "collecties": {
               "type": "SharedSlice"
             },

@@ -17,10 +17,11 @@ const AfbeeldingMetTekst = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="py-20"
     >
       <div
         className={clsx(
-          "relative py-40 container flex flex-col-reverse gap-6 sm:gap-10",
+          "relative container flex flex-col-reverse gap-6 sm:gap-10",
           slice.primary.image_position === "Links" && "sm:flex-row",
           slice.primary.image_position === "Rechts" && "sm:flex-row-reverse"
         )}

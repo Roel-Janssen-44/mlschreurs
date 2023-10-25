@@ -34,12 +34,10 @@ export default async function RootLayout({ children }) {
 
 async function Header() {
   const client = createClient();
-  const masterRef = await client.getMasterRef();
   const settings = await client.getSingle("settings");
   const navigation = await client.getSingle("navigatie");
-
   return (
-    <header className="h-20 flex justify-center items-center fixed z-20 top-0 bg-white w-screen shadow-lg">
+    <header className="h-20 flex justify-center items-center fixed z-20 top-0 bg-white w-screen shadow-md">
       <div className="container flex flex-wrap items-center sm:items-baseline justify-between leading-none">
         <PrismicNextLink
           href="/"
@@ -70,18 +68,18 @@ async function Header() {
 
                 {slice.items && slice.items.length > 1 && (
                   <>
-                    {/* To do chevron icon */}
                     <div className="absolute right-0 top-1/2 -translate-y-1/2 duration-300 scale-y-100 group-hover:-scale-y-100">
                       <HiChevronDown />
                     </div>
-                    <ul className="absolute min-w-[100%] top-10 left-0 pt-6 pb-2 bg-white rounded hidden group-hover:block">
+                    <ul className="absolute min-w-[200px] shadow-md top-10 left-0 pt-6 pb-2 bg-white rounded hidden group-hover:block">
                       {slice.items?.map((item) => (
                         <li
                           key={prismic.asText(item.label)}
                           className="font-semibold tracking-tight text-slate-800 w-full"
                         >
+                          {console.log(item)}
                           <PrismicNextLink
-                            field={item.link}
+                            href={`${slice.primary.link.url}/${item.link.uid}`}
                             className="px-3 py-4 w-full block hover:underline underline-offset-4"
                           >
                             <PrismicText field={item.label} />

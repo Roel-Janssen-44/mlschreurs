@@ -208,6 +208,9 @@ export type NavigatieDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ContactSlice
+  | CollageSlice
+  | ParagraafSlice
   | CollectiesSlice
   | AfbeeldingMetTekstSlice
   | HeroSlice;
@@ -228,7 +231,7 @@ interface PageDocumentData {
   title: prismic.TitleField;
 
   /**
-   * Parent field in *Page*
+   * Parent page field in *Page*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
@@ -236,7 +239,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  parent: prismic.ContentRelationshipField<"page">;
+  parent: prismic.ContentRelationshipField;
 
   /**
    * Slice Zone field in *Page*
@@ -451,6 +454,51 @@ export type AfbeeldingMetTekstSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Collage → Items*
+ */
+export interface CollageSliceDefaultItem {
+  /**
+   * Afbeelding field in *Collage → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collage.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Collage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CollageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<CollageSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Collage*
+ */
+type CollageSliceVariation = CollageSliceDefault;
+
+/**
+ * Collage Shared Slice
+ *
+ * - **API ID**: `collage`
+ * - **Description**: Collage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CollageSlice = prismic.SharedSlice<
+  "collage",
+  CollageSliceVariation
+>;
+
+/**
  * Primary content in *Collecties → Primary*
  */
 export interface CollectiesSliceDefaultPrimary {
@@ -549,6 +597,91 @@ type CollectiesSliceVariation = CollectiesSliceDefault;
 export type CollectiesSlice = prismic.SharedSlice<
   "collecties",
   CollectiesSliceVariation
+>;
+
+/**
+ * Primary content in *Contact → Primary*
+ */
+export interface ContactSliceDefaultPrimary {
+  /**
+   * Naam veld field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Telefoonnummer veld field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.phone
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
+
+  /**
+   * Email veld field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Bericht veld field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  message: prismic.KeyTextField;
+
+  /**
+   * Button field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Contact Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Contact*
+ */
+type ContactSliceVariation = ContactSliceDefault;
+
+/**
+ * Contact Shared Slice
+ *
+ * - **API ID**: `contact`
+ * - **Description**: Contact
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSlice = prismic.SharedSlice<
+  "contact",
+  ContactSliceVariation
 >;
 
 /**
@@ -754,6 +887,61 @@ export type NavigatieItemSlice = prismic.SharedSlice<
   NavigatieItemSliceVariation
 >;
 
+/**
+ * Primary content in *Paragraaf → Primary*
+ */
+export interface ParagraafSliceDefaultPrimary {
+  /**
+   * Titel field in *Paragraaf → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraaf.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Paragraaf field in *Paragraaf → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraaf.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Paragraaf Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ParagraafSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ParagraafSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Paragraaf*
+ */
+type ParagraafSliceVariation = ParagraafSliceDefault;
+
+/**
+ * Paragraaf Shared Slice
+ *
+ * - **API ID**: `paragraaf`
+ * - **Description**: Paragraaf
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ParagraafSlice = prismic.SharedSlice<
+  "paragraaf",
+  ParagraafSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -783,11 +971,19 @@ declare module "@prismicio/client" {
       AfbeeldingMetTekstSliceDefaultPrimary,
       AfbeeldingMetTekstSliceVariation,
       AfbeeldingMetTekstSliceDefault,
+      CollageSlice,
+      CollageSliceDefaultItem,
+      CollageSliceVariation,
+      CollageSliceDefault,
       CollectiesSlice,
       CollectiesSliceDefaultPrimary,
       CollectiesSliceDefaultItem,
       CollectiesSliceVariation,
       CollectiesSliceDefault,
+      ContactSlice,
+      ContactSliceDefaultPrimary,
+      ContactSliceVariation,
+      ContactSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
@@ -799,6 +995,10 @@ declare module "@prismicio/client" {
       NavigatieItemSliceVariation,
       NavigatieItemSliceDefault,
       NavigatieItemSliceNavigatieItemMetDropdown,
+      ParagraafSlice,
+      ParagraafSliceDefaultPrimary,
+      ParagraafSliceVariation,
+      ParagraafSliceDefault,
     };
   }
 }

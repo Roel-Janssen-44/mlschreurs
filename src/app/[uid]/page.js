@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import { asText } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
-
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 /**
  * @typedef {{ uid: string }} Params
@@ -43,7 +44,12 @@ export default async function Page({ params }) {
     .getByUID("page", params.uid)
     .catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+  return (
+    <>
+      <Breadcrumb page={page} />
+      <SliceZone slices={page.data.slices} components={components} />
+    </>
+  );
 }
 
 export async function generateStaticParams() {

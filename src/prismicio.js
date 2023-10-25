@@ -15,8 +15,16 @@ export const { repositoryName } = sm;
  */
 const routes = [
   {
-    type: "page",
-    path: "/:uid",
+    type: "settings",
+    path: "/settings",
+  },
+  {
+    type: "navigatie",
+    path: "/navigatie",
+  },
+  {
+    type: "footer",
+    path: "/footer",
   },
   {
     type: "page",
@@ -24,16 +32,8 @@ const routes = [
     path: "/",
   },
   {
-    type: "settings",
-    path: "/",
-  },
-  {
-    type: "navigatie",
-    path: "/",
-  },
-  {
-    type: "footer",
-    path: "/",
+    type: "page",
+    path: "/:uid",
   },
 ];
 

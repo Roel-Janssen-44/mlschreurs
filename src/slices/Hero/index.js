@@ -28,15 +28,18 @@ const Hero = ({ slice }) => {
             className="pointer-events-none select-none object-cover"
           />
         )}
+        <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-black"></div>
         <div className="absolute w-full left-0 top-1/2 -translate-y-1/2">
           <div className="container">
-            <PrismicRichText field={slice.primary.title} />
-            <PrismicRichText field={slice.primary.paragraph} />
-            <Button
-              type="primary"
-              link={slice.primary.button_link}
-              label={slice.primary.button_label}
-            />
+            <div className="text-white max-w-xl">
+              <PrismicRichText field={slice.primary.title} />
+              <PrismicRichText field={slice.primary.paragraph} />
+              <Button
+                type="secondary"
+                link={slice.primary.button_link}
+                label={slice.primary.button_label}
+              />
+            </div>
           </div>
         </div>
       </div>

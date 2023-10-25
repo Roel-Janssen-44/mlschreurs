@@ -14,41 +14,57 @@ const Collecties = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-gray-100"
+      className="my-20"
     >
-      <div className="relative py-40 container flex flex-col gap-6 sm:gap-10">
-        <div
-          className={clsx(
-            "text-center",
-            slice.primary.text_alignment !== "Midden" && "sm:text-left",
-            slice.primary.text_alignment === "Midden" && "sm:text-center"
-          )}
-        >
-          <PrismicRichText field={slice.primary.title} />
-          <PrismicRichText field={slice.primary.paragraph} />
+      <div className="container">
+        <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col gap-y-20 md:w-1/2 md:pr-10">
+            {slice.items.map((item, index) => {
+              if (index % 2 == 0) {
+                return (
+                  <div
+                    className="w-full relative group overflow-hidden"
+                    key={"collectieItem-" + index}
+                  >
+                    <PrismicNextLink field={item.category_link}>
+                      <PrismicNextImage
+                        field={item.category_image}
+                        className="group-hover:scale-105 duration-300 cursor-pointer"
+                      />
+                      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
+                      <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 text-white text-center mt-4 pb-4">
+                        <PrismicRichText field={item.category_name} />
+                      </div>
+                    </PrismicNextLink>
+                  </div>
+                );
+              }
+            })}
+          </div>
+          <div className="flex flex-col gap-y-20 md:mt-20 md:w-1/2 md:pl-10">
+            {slice.items.map((item, index) => {
+              if (index % 2 == 1) {
+                return (
+                  <div
+                    className="w-full relative group overflow-hidden"
+                    key={"collectieItem-" + index}
+                  >
+                    <PrismicNextLink field={item.category_link}>
+                      <PrismicNextImage
+                        field={item.category_image}
+                        className="group-hover:scale-105 duration-300 cursor-pointer"
+                      />
+                      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
+                      <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 text-white text-center mt-4 pb-4">
+                        <PrismicRichText field={item.category_name} />
+                      </div>
+                    </PrismicNextLink>
+                  </div>
+                );
+              }
+            })}
+          </div>
         </div>
-        {slice.items.length > 0 && (
-          <ul className="flex flex-row flex-wrap gap-8 justify-center sm:justify-between">
-            {slice.items.map((item, index) => (
-              <li
-                key={item.category_name + index}
-                className="group w-96 sm:w-[272px] md:w-[335px] lg:w-[277px] bg-white rounded hover:shadow-lg duration-300"
-              >
-                <PrismicNextLink field={item.category_link}>
-                  <div className="w-full aspect-1 overflow-hidden">
-                    <PrismicNextImage
-                      field={item.category_image}
-                      className="pointer-events-none select-none object-cover block aspect-1 group-hover:scale-105 duration-300"
-                    />
-                  </div>
-                  <div className="text-center mt-4 pb-4">
-                    <PrismicRichText field={item.category_name} />
-                  </div>
-                </PrismicNextLink>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
     </section>
   );
