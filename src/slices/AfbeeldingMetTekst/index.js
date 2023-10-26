@@ -38,7 +38,7 @@ const AfbeeldingMetTekst = ({ slice }) => {
         )}
         <div
           className={clsx(
-            "sm:w-1/2 flex flex-col justify-center",
+            "sm:w-1/2 flex flex-col justify-center max-w-lg",
             slice.primary.text_alignment === "Links" && "text-left",
             slice.primary.text_alignment === "Midden" && "text-center"
           )}

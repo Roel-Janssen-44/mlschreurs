@@ -29,7 +29,7 @@ const Hero = ({ slice }) => {
           />
         )}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-black"></div>
-        <div className="absolute w-full left-0 top-1/2 -translate-y-1/2">
+        <div className="absolute w-full left-0 lg:left-24 top-[53%] -translateY-1/2">
           <div className="container">
             <div className="text-white max-w-xl">
               <PrismicRichText field={slice.primary.title} />
