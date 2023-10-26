@@ -125,7 +125,7 @@ async function Footer() {
             ))}
           </ul>
         </div>
-        <div className="w-full  text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
+        <div className="w-full text-center mb-8 sm:text-left sm:w-1/2 md:w-1/4">
           <PrismicRichText field={footer.data.title_column_3} />
           <ul className="">
             {footer.data.column_3.map((item, index) => (
