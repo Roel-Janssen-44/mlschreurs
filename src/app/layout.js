@@ -1,5 +1,8 @@
+// "use client";
+
 import "./globals.css";
 
+// import { useState } from "react";
 import { Inter } from "next/font/google";
 import { PrismicText } from "@prismicio/react";
 import { PrismicRichText } from "@/components/PrismicRichText";
@@ -36,6 +39,7 @@ async function Header() {
   const client = createClient();
   const settings = await client.getSingle("settings");
   const navigation = await client.getSingle("navigatie");
+  // const [showNavbar, setShowNavbar] = useState(false);
   return (
     <header className="h-20 flex justify-center items-center fixed z-20 top-0 bg-white w-screen shadow-md">
       <div className="container flex flex-wrap items-center sm:items-baseline justify-between leading-none">
@@ -46,7 +50,10 @@ async function Header() {
           <PrismicText field={settings.data.siteTitle} />
         </PrismicNextLink>
         {/* Mobile menu button */}
-        <button className="flex sm:hidden gap-1.5 flex-col justify-center items-center min-w-[44px] min-h-[44px]">
+        <button
+          // onClick={() => setShowNavbar(!showNavbar)}
+          className="flex sm:hidden gap-1.5 flex-col justify-center items-center min-w-[44px] min-h-[44px]"
+        >
           <div className="bg-black rounded-full w-9 h-1"></div>
           <div className="bg-black rounded-full w-9 h-1"></div>
           <div className="bg-black rounded-full w-9 h-1"></div>

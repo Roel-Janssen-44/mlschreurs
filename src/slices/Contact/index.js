@@ -15,7 +15,7 @@ const Contact = ({ slice }) => {
     email: "",
     phone: "",
     message: "",
-    checkbox: false,
+    // checkbox: false,
   });
 
   const form = useRef(null);
@@ -36,10 +36,10 @@ const Contact = ({ slice }) => {
   const [sendStatus, setSendStatus] = useState("");
 
   const handleChange = (event) => {
-    if (event.target.id === "checkbox") {
-      setInputs((values) => ({ ...values, ["checkbox"]: !inputs.checkbox }));
-      return;
-    }
+    // if (event.target.id === "checkbox") {
+    //   setInputs((values) => ({ ...values, ["checkbox"]: !inputs.checkbox }));
+    //   return;
+    // }
     const name = event.target.name;
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
@@ -104,8 +104,8 @@ const Contact = ({ slice }) => {
       nameError === false &&
       emailError === false &&
       phoneError === false &&
-      messageError === false &&
-      checkboxError === false
+      messageError === false
+      // && checkboxError === false
     ) {
       setLoader(true);
       setStatus("");

@@ -21,13 +21,13 @@ const AfbeeldingMetTekst = ({ slice }) => {
     >
       <div
         className={clsx(
-          "relative container flex flex-col-reverse gap-6 sm:gap-10",
-          slice.primary.image_position === "Links" && "sm:flex-row",
-          slice.primary.image_position === "Rechts" && "sm:flex-row-reverse"
+          "relative container flex flex-col-reverse items-center justify-center gap-12 md:gap-10",
+          slice.primary.image_position === "Links" && "md:flex-row",
+          slice.primary.image_position === "Rechts" && "md:flex-row-reverse"
         )}
       >
         {prismic.isFilled.image(mainImage) && (
-          <div className="w-full sm:w-1/2">
+          <div className="w-full md:w-1/2">
             <PrismicNextImage
               field={mainImage}
               alt=""
@@ -38,7 +38,7 @@ const AfbeeldingMetTekst = ({ slice }) => {
         )}
         <div
           className={clsx(
-            "sm:w-1/2 flex flex-col justify-center max-w-lg",
+            "md:w-1/2 flex flex-col justify-center max-w-lg",
             slice.primary.text_alignment === "Links" && "text-left",
             slice.primary.text_alignment === "Midden" && "text-center"
           )}

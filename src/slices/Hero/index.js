@@ -19,7 +19,7 @@ const Hero = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="min-h-screen"
     >
-      <div className="relative h-screen">
+      <div className="relative h-[100svh]">
         {prismic.isFilled.image(backgroundImage) && (
           <PrismicNextImage
             field={backgroundImage}
@@ -29,9 +29,9 @@ const Hero = ({ slice }) => {
           />
         )}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-black"></div>
-        <div className="absolute w-full left-0 lg:left-24 top-[53%] -translateY-1/2">
-          <div className="container">
-            <div className="text-white max-w-xl">
+        <div className="absolute w-full left-0 sm:pl-12 lg:pl-24 top-[53%] -translateY-1/2">
+          <div className="container w-auto">
+            <div className="text-white max-w-[340px] md:max-w-md">
               <PrismicRichText field={slice.primary.title} />
               <PrismicRichText field={slice.primary.paragraph} />
               <Button
