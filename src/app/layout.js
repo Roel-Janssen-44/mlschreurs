@@ -25,7 +25,7 @@ import { HiChevronDown } from "react-icons/hi";
 export default async function RootLayout({ children }) {
   return (
     <html lang="nl" className={inter.variable}>
-      <body className="overflow-x-hidden antialiased">
+      <body className="overflow-x-hidden antialiased ">
         <Header />
         {children}
         <PrismicPreview repositoryName={repositoryName} />
