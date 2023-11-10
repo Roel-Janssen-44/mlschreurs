@@ -62,7 +62,7 @@ export default function Footer({ data }) {
           </div>
         </div>
       </div>
-      {/* <div className="bg-black bg-opacity-5 py-4">
+      <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
           <div>
             <span>
@@ -88,7 +88,7 @@ export default function Footer({ data }) {
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 }
