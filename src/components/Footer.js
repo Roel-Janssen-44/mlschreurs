@@ -19,7 +19,6 @@ export default function Footer({ data }) {
             </ul>
           </div>
         </div>
-        {/* 
         <div
           className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
@@ -27,7 +26,7 @@ export default function Footer({ data }) {
             <PrismicRichText field={data.data.title_column_2} />
             <ul className="">
               {data.data.column_2.map((item, index) => (
-                <li className="py-1" key={`col_1_item_${index}`}>
+                <li className="py-1" key={`col_2_item_${index}`}>
                   <PrismicRichText field={item.item} />
                 </li>
               ))}
@@ -41,31 +40,31 @@ export default function Footer({ data }) {
             <PrismicRichText field={data.data.title_column_3} />
             <ul className="">
               {data.data.column_3.map((item, index) => (
-                <li className="py-1" key={`col_1_item_${index}`}>
+                <li className="py-1" key={`col_3_item_${index}`}>
                   <PrismicRichText field={item.item} />
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        {/* <div
+        <div
           className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_4} />
             <ul className="">
               {data.data.column_4.map((item, index) => (
-                <li className="py-1" key={`col_1_item_${index}`}>
+                <li className="py-1" key={`col_4_item_${index}`}>
                   <PrismicRichText field={item.item} />
                 </li>
               ))}
             </ul>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
-          {/* <div>
+          <div>
             <span>
               © 2023 MLSchreurs | Gemaakt door{" "}
               <a
@@ -77,8 +76,8 @@ export default function Footer({ data }) {
                 Websidesign
               </a>
             </span>
-          </div> */}
-          {/* <div className="flex flex-row">
+          </div>
+          <div className="flex flex-row">
             {data.data.links_group.map((item, index) => (
               <div key={`footer_item-${index}`}>
                 {console.log("item")}
@@ -89,7 +88,7 @@ export default function Footer({ data }) {
                 </PrismicNextLink>
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
     </footer>
