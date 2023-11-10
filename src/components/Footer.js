@@ -64,7 +64,7 @@ export default function Footer({ data }) {
       </div>
       <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
-          <div>
+          {/* <div>
             <span>
               © 2023 MLSchreurs | Gemaakt door{" "}
               <a
@@ -76,7 +76,7 @@ export default function Footer({ data }) {
                 Websidesign
               </a>
             </span>
-          </div>
+          </div> */}
           {/* <div className="flex flex-row">
             {data.data.links_group.map((item, index) => (
               <div key={`footer_item-${index}`}>
