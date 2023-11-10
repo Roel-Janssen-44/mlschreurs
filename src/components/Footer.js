@@ -1,22 +1,12 @@
 import { PrismicRichText } from "@/components/PrismicRichText";
 import { PrismicNextLink } from "@prismicio/next";
 
-import Link from "next/link";
-
 export default function Footer({ data }) {
-  // let columnAmount = 3;
-  // if (data.data.column_4[0]?.item[0] !== undefined) {
-  //   columnAmount = 4;
-  // }
-
   return (
     <footer className="py-20 pb-0 bg-gray-200">
-      footer
-      {/* <div className="container flex flex-row flex-wrap justify-between md:max-w-xl lg:max-w-7xl">
+      <div className="container flex flex-row flex-wrap justify-between md:max-w-xl lg:max-w-7xl">
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center ${
-            columnAmount === 3 ? "lg:w-1/3" : "lg:w-1/4"
-          }`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_1} />
@@ -30,9 +20,7 @@ export default function Footer({ data }) {
           </div>
         </div>
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center ${
-            columnAmount === 3 ? "lg:w-1/3" : "lg:w-1/4"
-          }`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_2} />
@@ -46,9 +34,7 @@ export default function Footer({ data }) {
           </div>
         </div>
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center ${
-            columnAmount === 3 ? "lg:w-1/3" : "lg:w-1/4"
-          }`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_3} />
@@ -61,11 +47,9 @@ export default function Footer({ data }) {
             </ul>
           </div>
         </div>
-        {columnAmount === 4 && (
+        {data.data.column_4[0]?.item[0] && (
           <div
-            className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center ${
-              columnAmount === 3 ? "lg:w-1/3" : "lg:w-1/4"
-            }`}
+            className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
           >
             <div className="">
               <PrismicRichText field={data.data.title_column_4} />
@@ -80,7 +64,7 @@ export default function Footer({ data }) {
           </div>
         )}
       </div>
-      <div className="bg-black bg-opacity-5 py-4">
+      {/* <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
           <div>
             <span>
