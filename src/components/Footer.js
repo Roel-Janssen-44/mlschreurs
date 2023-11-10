@@ -47,7 +47,7 @@ export default function Footer({ data }) {
             </ul>
           </div>
         </div>
-        {/* <div
+        <div
           className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
@@ -60,7 +60,7 @@ export default function Footer({ data }) {
               ))}
             </ul>
           </div>
-        </div> */}
+        </div>
       </div>
       {/* <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
