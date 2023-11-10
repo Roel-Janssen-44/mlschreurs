@@ -70,14 +70,14 @@ export default function Footer({ data }) {
               <a
                 href="https://www.websidesign.nl/"
                 target="_blank"
-                rel="noopener noreferrer" // recommended for security reasons when using target="_blank"
+                rel="noopener noreferrer"
                 className="underline"
               >
                 Websidesign
               </a>
             </span>
           </div>
-          <div className="flex flex-row">
+          {/* <div className="flex flex-row">
             {data.data.links_group.map((item, index) => (
               <div key={`footer_item-${index}`}>
                 {console.log("item")}
@@ -88,7 +88,7 @@ export default function Footer({ data }) {
                 </PrismicNextLink>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
