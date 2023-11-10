@@ -5,7 +5,7 @@ export default function Footer({ data }) {
   return (
     <footer className="py-20 pb-0 bg-gray-200">
       <div className="container flex flex-row flex-wrap justify-between md:max-w-xl lg:max-w-7xl">
-        <div
+        {/* <div
           className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
@@ -46,7 +46,7 @@ export default function Footer({ data }) {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
         {/* <div
           className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
