@@ -1,5 +1,8 @@
 import { PrismicRichText } from "@/components/PrismicRichText";
 import { PrismicNextLink } from "@prismicio/next";
+
+import Link from "next/link";
+
 export default function Footer({ data }) {
   let columnAmount = 3;
   if (data.data.column_4[0]?.item[0] !== undefined) {
@@ -81,9 +84,13 @@ export default function Footer({ data }) {
           <div>
             <span>
               © 2023 MLSchreurs | Gemaakt door{" "}
-              <a href="" className="underline">
+              <Link
+                href="https://www.websidesign.nl/"
+                target="_blank"
+                className="underline"
+              >
                 Websidesign
-              </a>
+              </Link>
             </span>
           </div>
           <div className="flex flex-row">
