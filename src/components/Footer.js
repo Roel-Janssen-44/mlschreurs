@@ -88,7 +88,7 @@ export default function Footer({ data }) {
           </div>
           <div className="flex flex-row">
             {data.data.links_group.map((item, index) => (
-              <div>
+              <div key={`footer_item-${index}`}>
                 {index !== 0 && <span className="mx-2">|</span>}
                 <PrismicNextLink className="underline" field={item}>
                   {item.link_label}
