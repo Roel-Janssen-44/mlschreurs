@@ -84,20 +84,23 @@ export default function Footer({ data }) {
           <div>
             <span>
               © 2023 MLSchreurs | Gemaakt door{" "}
-              <Link
+              <a
                 href="https://www.websidesign.nl/"
                 target="_blank"
+                rel="noopener noreferrer" // recommended for security reasons when using target="_blank"
                 className="underline"
               >
                 Websidesign
-              </Link>
+              </a>
             </span>
           </div>
           <div className="flex flex-row">
             {data.data.links_group.map((item, index) => (
               <div key={`footer_item-${index}`}>
+                {console.log("item")}
+                {console.log(item)}
                 {index !== 0 && <span className="mx-2">|</span>}
-                <PrismicNextLink className="underline" field={item}>
+                <PrismicNextLink className="underline" field={item.link}>
                   {item.link_label}
                 </PrismicNextLink>
               </div>
