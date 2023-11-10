@@ -6,7 +6,7 @@ export default function Footer({ data }) {
     <footer className="py-20 pb-0 bg-gray-200">
       <div className="container flex flex-row flex-wrap justify-between md:max-w-xl lg:max-w-7xl">
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_1} />
@@ -20,7 +20,7 @@ export default function Footer({ data }) {
           </div>
         </div>
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_2} />
@@ -34,7 +34,7 @@ export default function Footer({ data }) {
           </div>
         </div>
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_3} />
@@ -47,8 +47,8 @@ export default function Footer({ data }) {
             </ul>
           </div>
         </div>
-        <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
+        {/* <div
+          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_4} />
@@ -60,9 +60,9 @@ export default function Footer({ data }) {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
-      {/* <div className="bg-black bg-opacity-5 py-4">
+      <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
           <div>
             <span>
@@ -90,7 +90,7 @@ export default function Footer({ data }) {
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 }
