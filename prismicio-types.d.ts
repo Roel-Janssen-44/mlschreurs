@@ -65,6 +65,31 @@ export interface FooterDocumentDataColumn4Item {
 }
 
 /**
+ * Item in *Footer → Beleid links*
+ */
+export interface FooterDocumentDataLinksGroupItem {
+  /**
+   * Link field in *Footer → Beleid links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.links_group[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Link label field in *Footer → Beleid links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.links_group[].link_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_label: prismic.KeyTextField;
+}
+
+/**
  * Content for Footer documents
  */
 interface FooterDocumentData {
@@ -155,6 +180,17 @@ interface FooterDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   column_4: prismic.GroupField<Simplify<FooterDocumentDataColumn4Item>>;
+
+  /**
+   * Beleid links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.links_group[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  links_group: prismic.GroupField<Simplify<FooterDocumentDataLinksGroupItem>>;
 }
 
 /**
@@ -958,6 +994,7 @@ declare module "@prismicio/client" {
       FooterDocumentDataColumn2Item,
       FooterDocumentDataColumn3Item,
       FooterDocumentDataColumn4Item,
+      FooterDocumentDataLinksGroupItem,
       NavigatieDocument,
       NavigatieDocumentData,
       NavigatieDocumentDataSlicesSlice,

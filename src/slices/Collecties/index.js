@@ -41,7 +41,7 @@ const Collecties = ({ slice }) => {
               }
             })}
           </div>
-          <div className="flex flex-col gap-y-20 md:mt-20 md:w-1/2 md:pl-10">
+          <div className="flex flex-col gap-y-10 sm:gap-y-16 md:gap-y-20 md:mt-20 md:w-1/2 md:pl-10">
             {slice.items.map((item, index) => {
               if (index % 2 == 1) {
                 return (

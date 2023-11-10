@@ -26,7 +26,7 @@
                 "label": "Item",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading5,strong,em,hyperlink"
+                "single": "paragraph,strong,em,hyperlink,heading5"
               }
             }
           }
@@ -52,7 +52,7 @@
                 "label": "Item",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading5,strong,em,hyperlink"
+                "single": "strong,em,hyperlink,paragraph"
               }
             }
           }
@@ -78,7 +78,7 @@
                 "label": "Item",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading5,strong,em,hyperlink"
+                "single": "strong,em,hyperlink,paragraph"
               }
             }
           }
@@ -104,7 +104,31 @@
                 "label": "Item",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading5,strong,em,hyperlink"
+                "single": "strong,em,hyperlink,paragraph"
+              }
+            }
+          }
+        }
+      },
+      "links_group": {
+        "type": "Group",
+        "config": {
+          "label": "Beleid links",
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            },
+            "link_label": {
+              "type": "Text",
+              "config": {
+                "label": "Link label",
+                "placeholder": ""
               }
             }
           }
