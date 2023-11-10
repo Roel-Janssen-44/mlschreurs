@@ -6,7 +6,7 @@ export default function Footer({ data }) {
     <footer className="py-20 pb-0 bg-gray-200">
       <div className="container flex flex-row flex-wrap justify-between md:max-w-xl lg:max-w-7xl">
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_1} />
@@ -20,7 +20,7 @@ export default function Footer({ data }) {
           </div>
         </div>
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_2} />
@@ -34,7 +34,7 @@ export default function Footer({ data }) {
           </div>
         </div>
         <div
-          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
+          className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
         >
           <div className="">
             <PrismicRichText field={data.data.title_column_3} />
@@ -47,22 +47,20 @@ export default function Footer({ data }) {
             </ul>
           </div>
         </div>
-        {data.data.column_4[0]?.item[0] && (
-          <div
-            className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/4`}
-          >
-            <div className="">
-              <PrismicRichText field={data.data.title_column_4} />
-              <ul className="">
-                {data.data.column_4.map((item, index) => (
-                  <li className="py-1" key={`col_1_item_${index}`}>
-                    <PrismicRichText field={item.item} />
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div
+          className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-auto`}
+        >
+          <div className="">
+            <PrismicRichText field={data.data.title_column_4} />
+            <ul className="">
+              {data.data.column_4.map((item, index) => (
+                <li className="py-1" key={`col_1_item_${index}`}>
+                  <PrismicRichText field={item.item} />
+                </li>
+              ))}
+            </ul>
           </div>
-        )}
+        </div>
       </div>
       {/* <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
