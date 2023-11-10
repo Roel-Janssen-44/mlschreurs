@@ -33,7 +33,7 @@ export default function Footer({ data }) {
             </ul>
           </div>
         </div>
-        <div
+        {/* <div
           className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
@@ -46,8 +46,8 @@ export default function Footer({ data }) {
               ))}
             </ul>
           </div>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={`w-full text-center flex justify-center mb-8 md:justify-end md:text-left md:w-1/2 lg:justify-center lg:w-1/3`}
         >
           <div className="">
@@ -60,9 +60,9 @@ export default function Footer({ data }) {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div className="bg-black bg-opacity-5 py-4">
+      {/* <div className="bg-black bg-opacity-5 py-4">
         <div className="container flex flex-col lg:flex-row gap-6 justify-center items-center lg:justify-around">
           <div>
             <span>
@@ -79,9 +79,7 @@ export default function Footer({ data }) {
           </div>
           <div className="flex flex-row">
             {data.data.links_group.map((item, index) => (
-              <div key={`footer_item-${index}`}>
-                {console.log("item")}
-                {console.log(item)}
+              <div key={`footer_item_links-${index}`}>
                 {index !== 0 && <span className="mx-2">|</span>}
                 <PrismicNextLink className="underline" field={item.link}>
                   {item.link_label}
@@ -90,7 +88,7 @@ export default function Footer({ data }) {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }
