@@ -4,14 +4,15 @@ import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 
 export default function Footer({ data }) {
-  let columnAmount = 3;
-  if (data.data.column_4[0]?.item[0] !== undefined) {
-    columnAmount = 4;
-  }
+  // let columnAmount = 3;
+  // if (data.data.column_4[0]?.item[0] !== undefined) {
+  //   columnAmount = 4;
+  // }
 
   return (
     <footer className="py-20 pb-0 bg-gray-200">
-      <div className="container flex flex-row flex-wrap justify-between md:max-w-xl lg:max-w-7xl">
+      footer
+      {/* <div className="container flex flex-row flex-wrap justify-between md:max-w-xl lg:max-w-7xl">
         <div
           className={`w-full text-center flex justify-center mb-8 md:justify-normal md:text-left md:w-1/2 lg:justify-center ${
             columnAmount === 3 ? "lg:w-1/3" : "lg:w-1/4"
@@ -107,7 +108,7 @@ export default function Footer({ data }) {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }
