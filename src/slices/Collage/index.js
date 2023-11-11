@@ -1,4 +1,3 @@
-import { PrismicRichText } from "@/components/PrismicRichText";
 import { PrismicNextImage } from "@prismicio/next";
 
 /**
@@ -14,10 +13,10 @@ const Collage = ({ slice }) => {
       className="my-20"
     >
       <div className="container">
-        <div className="flex flex-col gap-20 md:gap-0 md:flex-row">
-          <div className="flex flex-col gap-y-20 md:w-1/2 md:pr-10">
+        <div className="flex flex-col gap-20 md:gap-6 md:flex-row md:flex-wrap">
+          <div className="flex flex-col gap-y-6 md:flex-1">
             {slice.items.map((item, index) => {
-              if (index % 2 == 0) {
+              if (index % 3 == 0) {
                 return (
                   <div className="w-full" key={"collageItem-" + index}>
                     <PrismicNextImage field={item.image} />
@@ -26,9 +25,20 @@ const Collage = ({ slice }) => {
               }
             })}
           </div>
-          <div className="flex flex-col gap-y-20 md:mt-20 md:w-1/2 md:pl-10">
+          <div className="flex flex-col gap-y-6 md:flex-1">
             {slice.items.map((item, index) => {
-              if (index % 2 == 1) {
+              if (index % 3 == 1) {
+                return (
+                  <div className="w-full" key={"collageItem-" + index}>
+                    <PrismicNextImage field={item.image} />
+                  </div>
+                );
+              }
+            })}
+          </div>
+          <div className="flex flex-col gap-y-6 md:flex-1">
+            {slice.items.map((item, index) => {
+              if (index % 3 == 2) {
                 return (
                   <div className="w-full" key={"collageItem-" + index}>
                     <PrismicNextImage field={item.image} />

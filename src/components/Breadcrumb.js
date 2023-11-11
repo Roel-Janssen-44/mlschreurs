@@ -9,7 +9,7 @@ export function Breadcrumb({ page }) {
       <div className="w-full h-64 relative overflow-hidden">
         <PrismicNextImage
           field={page.data?.meta_image}
-          className="pointer-events-none select-none object-cover object-center h-[350px]"
+          className="pointer-events-none select-none object-cover object-center h-[300px]"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
         <div className="absolute top-0 left-0 w-full h-full">
@@ -39,9 +39,9 @@ export function Breadcrumb({ page }) {
           </div>
         </div>
       </div>
-      <p className="lg:max-w-2xl container text-center sm:text-left mx-auto my-20">
+      {/* <p className="lg:max-w-2xl container text-center sm:text-left mx-auto my-20">
         {page.data?.meta_description}
-      </p>
+      </p> */}
     </div>
   );
 }
