@@ -42,7 +42,7 @@ const CookieConsent = (props) => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-slate-700 bg-opacity-70">
+      <div className="fixed inset-0 z-20 bg-slate-700 bg-opacity-70">
         <div className="fixed bottom-0 left-0 right-0 flex items-center justify-between px-4 py-8 bg-gray-100">
           <span className="text-dark text-base mr-16">
             Deze website gebruikt cookies om de gebruikerservaring te
