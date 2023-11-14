@@ -4,10 +4,15 @@ import { PrismicRichText } from "@/components/PrismicRichText";
 import { HiChevronRight } from "react-icons/hi";
 
 export function Breadcrumb({ page }) {
+  if (page.uid === "privacy-policy") return <div className="h-10"></div>;
   return (
     <div className="mt-20">
       <div className="w-full h-64 relative overflow-hidden">
         <PrismicNextImage
+          loader={undefined}
+          loading="eager"
+          width={1920}
+          height={500}
           field={page.data?.meta_image}
           className="pointer-events-none select-none object-cover object-center h-[300px]"
         />

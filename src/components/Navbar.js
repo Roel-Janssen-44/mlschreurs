@@ -20,6 +20,7 @@ export default function Navbar({ navigation, settings }) {
       <div className="container flex flex-wrap items-center sm:items-baseline justify-between leading-none h-20">
         <PrismicNextLink
           href="/"
+          aria-hidden
           onClick={closeNavbar}
           className="z-20 text-3xl p-4 pl-0 font-semibold tracking-tight"
         >
@@ -27,6 +28,7 @@ export default function Navbar({ navigation, settings }) {
         </PrismicNextLink>
         {/* Mobile menu button */}
         <button
+          aria-label="navigatie button"
           onClick={() => setShowNavbar(!showNavbar)}
           className="flex relative z-20 sm:hidden gap-1.5 flex-col justify-center items-center min-w-[44px] min-h-[44px]"
         >

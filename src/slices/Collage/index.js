@@ -18,8 +18,11 @@ const Collage = ({ slice }) => {
             {slice.items.map((item, index) => {
               if (index % 3 == 0) {
                 return (
-                  <div className="w-full" key={"collageItem-" + index}>
-                    <PrismicNextImage field={item.image} />
+                  <div
+                    className="w-full flex justify-center"
+                    key={"collageItem-" + index}
+                  >
+                    <PrismicNextImage field={item.image} width={450} />
                   </div>
                 );
               }
@@ -29,8 +32,11 @@ const Collage = ({ slice }) => {
             {slice.items.map((item, index) => {
               if (index % 3 == 1) {
                 return (
-                  <div className="w-full" key={"collageItem-" + index}>
-                    <PrismicNextImage field={item.image} />
+                  <div
+                    className="w-full flex justify-center"
+                    key={"collageItem-" + index}
+                  >
+                    <PrismicNextImage field={item.image} width={450} />
                   </div>
                 );
               }
@@ -40,8 +46,11 @@ const Collage = ({ slice }) => {
             {slice.items.map((item, index) => {
               if (index % 3 == 2) {
                 return (
-                  <div className="w-full" key={"collageItem-" + index}>
-                    <PrismicNextImage field={item.image} />
+                  <div
+                    className="w-full flex justify-center"
+                    key={"collageItem-" + index}
+                  >
+                    <PrismicNextImage field={item.image} width={450} />
                   </div>
                 );
               }

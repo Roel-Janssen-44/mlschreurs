@@ -14,6 +14,7 @@ const inter = Inter({
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 /**
  * @param {{ children: React.ReactNode }}
@@ -28,6 +29,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="nl" className={inter.variable}>
+      <CookieBanner />
       <body className="overflow-x-hidden antialiased ">
         <Navbar navigation={navigation} settings={settings} />
         {children}

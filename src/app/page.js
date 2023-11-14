@@ -12,7 +12,7 @@ export async function generateMetadata() {
   const page = await client.getByUID("page", "home");
 
   return {
-    title: page.data.title,
+    title: "Home | MLSchreurs",
     description: page.data.meta_description,
     openGraph: {
       title: page.data.meta_title,
