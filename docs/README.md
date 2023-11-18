@@ -1,4 +1,4 @@
-# Prismic + Next.js Multi-Page Starter
+<!-- # Prismic + Next.js Multi-Page Starter
 
 This page covers how to use **Prismic + Next.js Multi-Page Starter** with Prismic.
 
@@ -115,4 +115,4 @@ For the official Prismic documentation, see [Prismic's guide for Next.js](https:
 [prismic-docs]: https://prismic.io/docs/technologies/nextjs
 [prismic-sign-up]: https://prismic.io/dashboard/signup
 [nextjs]: https://nextjs.org/
-[live-demo]: https://nextjs-starter-prismic-multi-page.vercel.app/
+[live-demo]: https://nextjs-starter-prismic-multi-page.vercel.app/ -->

@@ -2,6 +2,7 @@ import "./globals.css";
 
 import { Inter } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
+import Head from "next/head";
 
 import { createClient, repositoryName } from "@/prismicio";
 
@@ -29,6 +30,9 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="nl" className={inter.variable}>
       <CookieBanner />
+      <Head>
+        <link rel="icon" href="/favicon.png" sizes="any" />
+      </Head>
       <body className="overflow-x-hidden antialiased ">
         <Navbar navigation={navigation} settings={settings} />
         {children}
