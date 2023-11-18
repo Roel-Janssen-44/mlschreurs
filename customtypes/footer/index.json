@@ -84,32 +84,6 @@
           }
         }
       },
-      "title_column_4": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Titel kolom 4",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "heading4"
-        }
-      },
-      "column_4": {
-        "type": "Group",
-        "config": {
-          "label": "Kolom 4",
-          "fields": {
-            "item": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Item",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "single": "strong,em,hyperlink,paragraph"
-              }
-            }
-          }
-        }
-      },
       "links_group": {
         "type": "Group",
         "config": {

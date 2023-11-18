@@ -50,21 +50,6 @@ export interface FooterDocumentDataColumn3Item {
 }
 
 /**
- * Item in *Footer → Kolom 4*
- */
-export interface FooterDocumentDataColumn4Item {
-  /**
-   * Item field in *Footer → Kolom 4*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.column_4[].item
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  item: prismic.RichTextField;
-}
-
-/**
  * Item in *Footer → Beleid links*
  */
 export interface FooterDocumentDataLinksGroupItem {
@@ -158,28 +143,6 @@ interface FooterDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   column_3: prismic.GroupField<Simplify<FooterDocumentDataColumn3Item>>;
-
-  /**
-   * Titel kolom 4 field in *Footer*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.title_column_4
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title_column_4: prismic.TitleField;
-
-  /**
-   * Kolom 4 field in *Footer*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.column_4[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  column_4: prismic.GroupField<Simplify<FooterDocumentDataColumn4Item>>;
 
   /**
    * Beleid links field in *Footer*
@@ -993,7 +956,6 @@ declare module "@prismicio/client" {
       FooterDocumentDataColumn1Item,
       FooterDocumentDataColumn2Item,
       FooterDocumentDataColumn3Item,
-      FooterDocumentDataColumn4Item,
       FooterDocumentDataLinksGroupItem,
       NavigatieDocument,
       NavigatieDocumentData,

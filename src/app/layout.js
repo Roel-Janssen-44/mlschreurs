@@ -1,7 +1,6 @@
 import "./globals.css";
 
 import { Inter } from "next/font/google";
-import { PrismicRichText } from "@/components/PrismicRichText";
 import { PrismicPreview } from "@prismicio/next";
 
 import { createClient, repositoryName } from "@/prismicio";
