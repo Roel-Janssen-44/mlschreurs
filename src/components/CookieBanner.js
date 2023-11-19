@@ -22,7 +22,16 @@ const CookieConsent = (props) => {
     script.async = true;
     document.head.appendChild(script);
 
+    // script.onload = () => {
+    //   window.dataLayer = window.dataLayer || [];
+    //   function gtag() {
+    //     window.dataLayer.push(arguments);
+    //   }
+    //   gtag("js", new Date());
+    //   gtag("config", "G-0309S7KH8C");
+    // };
     script.onload = () => {
+      console.log("Google Analytics script loaded successfully");
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         window.dataLayer.push(arguments);
@@ -66,14 +75,14 @@ const CookieConsent = (props) => {
       </div>
 
       {/* Google Analytics Script */}
-      <Script id="google-analytics">
+      {/* <Script id="google-analytics">
         {`
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-0309S7KH8C');
     `}
-      </Script>
+      </Script> */}
     </>
   );
 };
