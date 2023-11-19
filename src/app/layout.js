@@ -3,7 +3,6 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import Head from "next/head";
-import Script from "next/script";
 
 import { createClient, repositoryName } from "@/prismicio";
 
@@ -30,26 +29,11 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="nl" className={inter.variable}>
+      <CookieBanner />
       <Head>
         <link rel="icon" href="/favicon.png" sizes="any" />
       </Head>
-      {/* <CookieBanner /> */}
       <body className="overflow-x-hidden antialiased ">
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-0309S7KH8C`}
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0309S7KH8C', { 'send_page_view': true });
-                    `,
-          }}
-        />
         <Navbar navigation={navigation} settings={settings} />
         {children}
         <PrismicPreview repositoryName={repositoryName} />
