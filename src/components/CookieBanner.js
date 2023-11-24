@@ -52,25 +52,27 @@ const CookieConsent = (props) => {
   return (
     <>
       <div className="fixed inset-0 z-20 bg-slate-700 bg-opacity-70">
-        <div className="fixed bottom-0 left-0 right-0 flex items-center justify-between px-4 py-8 bg-gray-100">
-          <span className="text-dark text-base mr-16">
+        <div className="fixed bottom-0 left-0 right-0 flex items-center gap-4 justify-between px-4 py-8 bg-gray-100">
+          <span className="text-dark text-base sm:mr-16">
             Deze website gebruikt cookies om de gebruikerservaring te
             verbeteren. Door gebruik te maken van onze website geeft u
             toestemming voor alle cookies in overeenstemming met ons
             cookiebeleid.
           </span>
-          <button
-            className="border-2 border-black py-2 px-8 rounded text-black"
-            onClick={() => denyCookie()}
-          >
-            Weigeren
-          </button>
-          <button
-            className="bg-black ml-4 py-2 px-8 rounded text-white"
-            onClick={() => acceptCookie()}
-          >
-            Accepteren
-          </button>
+          <div className="flex flex-col gap-4 md:flex-row">
+            <button
+              className="border-2 border-black py-2 px-8 rounded text-black"
+              onClick={() => denyCookie()}
+            >
+              Weigeren
+            </button>
+            <button
+              className="bg-black md:ml-4 py-2 px-8 rounded text-white"
+              onClick={() => acceptCookie()}
+            >
+              Accepteren
+            </button>
+          </div>
         </div>
       </div>
 
