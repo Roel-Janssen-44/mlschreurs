@@ -1,4 +1,4 @@
-# Klantnaam - Website Project
+# MLSchreurs - Website Project
 
 Dit is een eenvoudige website die is ontworpen voor een fotograaf met als doel haar portfolio van foto's te presenteren.
 
