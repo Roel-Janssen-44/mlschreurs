@@ -1,6 +1,6 @@
 # MLSchreurs - Website Project
 
-Dit is een eenvoudige website die is ontworpen voor een fotograaf met als doel haar portfolio van foto's te presenteren.
+Dit is een website die is ontworpen voor een fotograaf met als doel haar portfolio van foto's te presenteren.
 
 ## Live site
 
@@ -9,9 +9,9 @@ Dit is een eenvoudige website die is ontworpen voor een fotograaf met als doel h
 ## Technologieën
 
 Deze website is gebouwd met behulp van de volgende technologieën:
-- **Nextjs**: Voor het vormgeven van de website.
-- **Tailwind CSS**: Voor het stijlen en vormgeven van de website.
-- **Prismic.io**: Als content management system.
+- **Nextjs**
+- **Tailwind CSS**
+- **Prismic.io**
 
 ## Contact
 
