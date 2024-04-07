@@ -9,7 +9,7 @@ Dit is een eenvoudige website die is ontworpen voor een fotograaf met als doel h
 ## Technologieën
 
 Deze website is gebouwd met behulp van de volgende technologieën:
-- **Nextjs**: Voor het stijlen en vormgeven van de website.
+- **Nextjs**: Voor het vormgeven van de website.
 - **Tailwind CSS**: Voor het stijlen en vormgeven van de website.
 - **Prismic.io**: Als content management system.
 
